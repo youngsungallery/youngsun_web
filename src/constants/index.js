@@ -12,24 +12,24 @@ import port10 from "../assets/img/port10.jpg";
 
 export const headerNav = [
     {
-        title: "intro",
-        url: "#intro"
+        title: "전시일정",
+        url: "#poster"
     },
     {
-        title: "skill",
-        url: "#skill"
+        title: "특강",
+        url: "#video"
     },
     {
-        title: "site",
-        url: "#site"
+        title: "전시",
+        url: "#exhibition"
     },
     {
-        title: "portfolio",
-        url: "#port"
+        title: "컬럼",
+        url: "#column"
     },
     {
-        title: "contact",
-        url: "#contact"
+        title: "기록",
+        url: "#history"
     }
 ];
 

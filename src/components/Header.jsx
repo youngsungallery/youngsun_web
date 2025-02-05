@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 import { headerNav } from "../constants";
 
@@ -14,7 +16,14 @@ const Header = () => {
             <div className="header__inner">
                 <div className="header__logo">
                     <h1>
-                        <a href="#">Next.js<em>사이트 만들기</em></a>
+                        <Link href="/">
+                            <img
+                                src="/youngsungallery_logo.png"
+                                alt="영선갤러리"
+                                width="150"
+                                height="50"
+                            />
+                        </Link>
                     </h1>
                 </div>
                 <nav

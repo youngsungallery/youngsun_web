@@ -1,18 +1,19 @@
-import "@/assets/scss/style.scss"
+import "@/assets/scss/style.scss";
 
 export const metadata = {
-  title: "영선갤러리 사이트 만들기",
-  description: "next.js로 사이트 만드는 연습을 진행하는 공간입니다. 자료가 수시로 바뀔 수 있습니다.",
-  keywords: ["넥스트", "next.js"]
+  title: "영선갤러리",
+  description: "안녕하세요. 영선갤러리입니다.",
+  keywords: ["넥스트", "next.js", "영선갤러리", "갤러리", "미술갤러리"],
+  generator: "Visual Studio Code",
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="ko">
-      <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-      <body>
-        {children}
-      </body>
-    </html>
-  );
+    return (
+        <html lang="ko">
+            <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+            <body>
+                {children}
+            </body>
+        </html>
+    );
 }
