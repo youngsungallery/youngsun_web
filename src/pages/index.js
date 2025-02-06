@@ -1,13 +1,15 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import Home from "@/components/Home";
 
-const Home = () => {
+const IndexPage = () => {
     return (
       <div>
         <Header />
-        <h1>Welcome to Youngsun Gallery</h1>
-        <p>This is the homepage.</p>
+        <Home />
+        <Footer />
       </div>
     );
   }
   
-  export default Home;
+  export default IndexPage;

@@ -1,0 +1,99 @@
+@import "./variables"; // 변수 파일 불러오기
+
+// 홈 컨테이너
+.home-container {
+  padding: 20px;
+  text-align: center;
+}
+
+// 탭 메뉴 스타일
+nav {
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    list-style: none;
+
+    li {
+      cursor: pointer;
+      font-size: 18px;
+      padding: 10px;
+      color: $text-color;
+      transition: color 0.4s;
+
+      &:hover {
+        color: $hover-text-color;
+      }
+
+      &.active {
+        font-weight: bold;
+        color: $highlight-color;
+      }
+    }
+  }
+}
+
+// 포스터 영역
+.posters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+
+  .poster-item {
+    width: 250px;
+    text-align: center;
+    border: 1px solid $silver-color;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px $silver-color;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px $red-color;
+    }
+
+    img {
+      width: 100%;
+      height: 400px; // ✅ 높이 추가
+      display: block;
+      object-fit: cover; // ✅ 비율 유지하면서 꽉 차게
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: bold;
+      color: $text-color;
+      margin: 10px 0;
+
+      em {
+        display: block;
+        font-size: 10px;
+        text-align: right;
+        margin-right: 10px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    // 이미지가 없을 경우 스타일
+    .no-image {
+      width: 100%;
+      height: 400px; // ✅ 높이를 이미지와 동일하게 설정
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ddd;
+      color: #666;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}

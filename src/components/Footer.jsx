@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
 
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <footer className="footer">
+      <div className="container">
+        <p>&copy; 2025 Youngsun Gallery. All rights reserved. next.js make & GPT.</p>
+      </div>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

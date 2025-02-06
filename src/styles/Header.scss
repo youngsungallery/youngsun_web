@@ -1,0 +1,75 @@
+/* src/styles/Header.scss */
+@import './variables';
+
+.skip-link {
+        position: absolute;
+        top: -999px;
+        left: 0;
+        background-color: $hover-text-color;
+        color: white;
+        padding: 10px;
+        font-size: 16px;
+        text-decoration: none;
+        z-index: 1000;
+    }
+  
+.skip-link:focus {
+    top: 10px;
+    outline: 2px solid #ff9900;
+}
+  
+header {
+    background-color: $background-color;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            a {
+                font-size: 30px;
+                font-weight: 600;
+                color: $text-color;
+                text-decoration: none;
+            }
+        }
+        nav {
+            ul {
+                display: flex;
+                gap: 20px;
+                list-style: none;
+
+                li {
+                    position: relative;
+
+                    &:hover::after {
+                        content: ''; /* 가상의 요소 생성 */
+                        position: absolute;
+                        bottom: -2px;
+                        left: 0;
+                        width: 100%;
+                        height: 2px; /* 라인 두께 */
+                        background-color: #e3cfcf; /* 라인 색상 */
+                        transition: all 0.3s;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: $text-color;
+                        font-weight: 500;
+                        transition: all 0.3s;
+
+                        &:hover {
+                            color: $hover-text-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
