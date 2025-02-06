@@ -4,7 +4,7 @@ const Skip = () => {
     return (
         <div id="skip">
             <a href="#header">헤더 영역바로가기</a>
-            <a href="#poster">인트로 영역</a>
+            <a href="#poster">전시 포스터 영역</a>
             <a href="#video">특강 영역</a>
             <a href="#exhibition">전시 영역</a>
             <a href="#column">컬럼 영역</a>

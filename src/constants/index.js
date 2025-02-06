@@ -33,6 +33,65 @@ export const headerNav = [
     }
 ];
 
+export const posterText = [
+    {
+        category: "전시",
+        day: "2024.01.06 ~ 2024.02.28",
+        title: "소장 작품전",
+        subtitle: "영선갤러리",
+        image: "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/exh/exh_main_2025_01_06.png?raw=true",
+    },
+    {
+        category: "전시",
+        day: "2024.10.05 ~ 2024.12.31",
+        title: "영선갤러리에서 만나다!!",
+        subtitle: "특별 인연전",
+        image: "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/exh/exh_main_2024_10_05.png?raw=true",
+    },
+    {
+        category: "전시",
+        day: "2024.09.02 ~ 2024.09.30",
+        title: "나비! 꽃으로 피다",
+        subtitle: "곽연주작가",
+        image: "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/exh/exh_main_2024_09_02.png?raw=true",
+    },
+    {
+        category: "전시",
+        day: "2024.07.01 ~ 2024.08.30",
+        title: "소장 작품전",
+        subtitle: "영선갤러리",
+        image: "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/exh/exh_main_2024_07_01.png?raw=true",
+    },
+    {
+        category: "미술특강",
+        day: "2024.11.16",
+        title: "아트 컬렉팅과 미술품 투자 전략",
+        subtitle: "김정환 작가",
+        image: "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/exh/spc_2024_11_16.png?raw=true",
+    },
+    {
+        category: "미술특강",
+        day: "2023.06.10",
+        title: "한지작업, 유럽과 미주지역 순회전 이야기",
+        subtitle: "이승철 작가",
+        image: "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/exh/spc_2023_06_10.png?raw=true",
+    },
+    {
+        category: "미술특강",
+        day: "2022.12.10",
+        title: "초보 컬렉팅을 위한 그림이야기 3",
+        subtitle: "김형진 관장",
+        image: "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/exh/spc_2022_12_10.png?raw=true",
+    },
+    {
+        category: "미술특강",
+        day: "2022.05.14",
+        title: "2022 아트마켓 트렌드 & 향후전망",
+        subtitle: "김윤섭 (미술평론가, 아이프 미술경영연구소 대표)",
+        image: "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/exh/spc_2022_05_14.png?raw=true",
+    },
+];
+
 export const introText = {
     title: "port developer",
     desc: ["talent is", "found at the end of the", "effort"],
@@ -53,53 +112,6 @@ export const skillText = [
         desc: "정직은 다른 사람보다 나에게 큰 의미를 부여해야 한다. 자신이 정직하지 않으면 진정으로 원하는 일을 열정적으로 밀고 나갈 수 없다. 마음에서 우러나오는 일을 해야 정직해지며 삶을 더 즐길 줄 알게 된다."
     }
 ]
-
-export const siteText = [
-    {
-        text: ["make", "site compliant with", "webstandard"],
-        title: "비트를 이용한 사이트 제작",
-        code: "https://github.com/webstoryboy/port2023-vite",
-        view: "https://port2023-vite.netlify.app",
-        info: [
-            "site coding",
-            "production period : two days",
-            "use stack : HTML5/CSS3, CSS Variable, Vite",
-        ],
-    },
-    {
-        text: ["make", "site compliant with", "react.js"],
-        title: "리액트를 이용한 사이트 제작",
-        code: "https://github.com/webstoryboy/port2023-react",
-        view: "https://port2023-react.netlify.app",
-        info: [
-            "site coding",
-            "production period : two days",
-            "use stack : HTML5/CSS3, CSS Variable, react",
-        ],
-    },
-    {
-        text: ["make", "site compliant with", "vue.js"],
-        title: "뷰를 이용한 사이트 제작",
-        code: "https://github.com/webstoryboy/port2023-vue",
-        view: "https://port2023-vue.netlify.app",
-        info: [
-            "site coding",
-            "production period : two days",
-            "use stack : HTML5/CSS3, Scss Variable, vue",
-        ],
-    },
-    {
-        text: ["make", "site compliant with", "next.js"],
-        title: "넥스트를 이용한 사이트 제작",
-        code: "https://github.com/webstoryboy/port2023-next",
-        view: "https://port2023-next.netlify.app",
-        info: [
-            "site coding",
-            "production period : two days",
-            "use stack : HTML5/CSS3, Scss Variable, next.js",
-        ],
-    },
-];
 
 export const portText = [
     {
