@@ -10,11 +10,11 @@
         font-size: 4vw;
         font-weight: 900;
         line-height: 1.6;
-        font-family: var(--mainKor-font);
+        font-family: var(--Noto-font);
         text-transform: uppercase;
         color: var(--black100);
         border-bottom: 0.4vw solid var(--black100);
-        margin-bottom: 100px;
+        margin-bottom: 150px;
 
         @media (max-width: 800px){ 
             width: 100%;
@@ -34,7 +34,7 @@
     }
     .poster__wrap {
         .poster__item {
-            height: 50vh;
+            height: 60vh;
             @include flex-center;
             flex-direction: column;
             position: sticky;
@@ -42,7 +42,7 @@
 
             &.s1 {
                 background-color: var(--subBg100);
-                top: 180px;
+                top: 200px;
 
                 @media (max-width: 800px){ 
                     top: 140px;
@@ -50,7 +50,7 @@
             }
             &.s2 {
                 background-color: var(--subBg200);
-                top: 260px;
+                top: 330px;
 
                 @media (max-width: 800px){ 
                     top: 160px;
@@ -58,7 +58,7 @@
             }
             &.s3 {
                 background-color: var(--subBg300);
-                top: 270px;
+                top: 340px;
 
                 @media (max-width: 800px){ 
                     top: 180px;
@@ -66,7 +66,7 @@
             }
             &.s4 {
                 background-color: var(--subBg400);
-                top: 280px;
+                top: 350px;
 
                 @media (max-width: 800px){ 
                     top: 200px;
@@ -74,7 +74,7 @@
             }
             &.s5 {
                 background-color: var(--subBg400);
-                top: 190px;
+                top: 330px;
 
                 @media (max-width: 800px){ 
                     top: 220px;
@@ -82,7 +82,7 @@
             }
             &.s6 {
                 background-color: var(--subBg300);
-                top: 270px;
+                top: 340px;
 
                 @media (max-width: 800px){ 
                     top: 240px;
@@ -90,7 +90,7 @@
             }
             &.s7 {
                 background-color: var(--subBg200);
-                top: 280px;
+                top: 350px;
 
                 @media (max-width: 800px){ 
                     top: 260px;
@@ -98,7 +98,7 @@
             }
             &.s8 {
                 background-color: var(--subBg100);
-                top: 290px;
+                top: 360px;
 
                 @media (max-width: 800px){ 
                     top: 280px;

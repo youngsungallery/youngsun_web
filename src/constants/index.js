@@ -92,6 +92,49 @@ export const posterText = [
     },
 ];
 
+export const videoText = [
+    {
+        title: "이승철작가의 작품 세계",
+        youtube: "https://www.youtube.com/embed/w0RhSMG6Ot4?rel=0",
+        decs: "김형진 관장",
+    },
+    {
+        title: "새로운 문화환경과 한국미술의 가능성",
+        youtube: "https://www.youtube.com/embed/MUh00pwm1ts?si=AHFHOroQhVgso6kY?rel=0",
+        decs: "김상철 교수",
+    },
+    {
+        title: "2023년 미술 세금이야기",
+        youtube: "https://www.youtube.com/embed/O0JurxHntKc?si=w8RqTjT2Xi3X0W7X?rel=0",
+        decs: "김형진 관장",
+    },
+    {
+        title: "미술품 컬렉션의 의미와 가치",
+        youtube: "https://www.youtube.com/embed/Xi5qedvfWKc?rel=0",
+        decs: "FM 갤러리 배기성 대표",
+    },
+    {
+        title: "서수영작가의 작품 세계",
+        youtube: "https://www.youtube.com/embed/azM4DoHgumw?rel=0",
+        decs: "김형진 관장",
+    },
+    {
+        title: "김환기의 작품 세계",
+        youtube: "https://www.youtube.com/embed/G4jEYUblgbk?rel=0",
+        decs: "김형진 관장",
+    },
+    {
+        title: "미술시장 트렌드",
+        youtube: "https://www.youtube.com/embed/i5R_nxjYMVg?rel=0",
+        decs: "김형진 관장",
+    },
+    {
+        title: "일상에서 미술을 활용할 수 있는 노하우",
+        youtube: "https://www.youtube.com/embed/abFFw74ZAvk?rel=0",
+        decs: "김형진 관장",
+    },
+];
+
 export const introText = {
     title: "port developer",
     desc: ["talent is", "found at the end of the", "effort"],
