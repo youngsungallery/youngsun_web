@@ -1,58 +1,9 @@
-import React, { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-
-import { headerNav } from "../constants";
+import React from 'react'
 
 const Header = () => {
-    const [show, setShow] = useState(false);
-
-    const toggleMenu = () => {
-        setShow((prevShow) => !prevShow);
-    }
-
-    return (
-        <header id="header" role="banner">
-            <div className="header__inner">
-                <div className="header__logo">
-                    <h1>
-                        <Link href="/">
-                            <img
-                                src="/youngsungallery_logo.png"
-                                alt="영선갤러리"
-                                width="150"
-                                height="50"
-                            />
-                        </Link>
-                    </h1>
-                </div>
-                <nav
-                    className={`header__nav ${show ? "show" : ""}`}
-                    role="navigation"
-                    aria-label="메인메뉴"
-                >
-                    <ul>
-                        {headerNav.map((nav, key) => (
-                            <li key={key}>
-                                <a href={nav.url}>{nav.title}</a>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
-                <div
-                    className="header__nav__mobile"
-                    id="headerToggle"
-                    aria-controls="primry-menu"
-                    aria-expanded={show ? "true" : "false"}
-                    role="button"
-                    tabIndex="0"
-                    onClick={toggleMenu}
-                >
-                    <span></span>
-                </div>
-            </div>
-        </header>
-    )
+  return (
+    <div>Header</div>
+  )
 }
 
-export default Header;
+export default Header
