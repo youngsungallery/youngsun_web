@@ -1,13 +1,15 @@
 import React, { useState } from "react";
-import postersData from "../DB/posters.json"; // 전시 데이터
-import exhibitionsData from "../DB/exhibitions.json"; // 특강 데이터
+import exhibitionsData from '../DB/exhibitions.json'; // 전시 데이터
+import lecturesData from '../DB/lectures.json'; // 특강 데이터
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState("exhibitions"); // 기본 탭 설정
 
   // 최신 4개 데이터만 가져오기 (id 기준 역순)
-  const posters = postersData.slice(0, 4);
-  const lectures = exhibitionsData.slice(0, 4);
+  const exhibtionsWithImages = exhibitionsData.filter(exhibtion => exhibtion.image); // 이미지가 있는 포스터만
+  const exhibtions = exhibtionsWithImages.slice(0, 4);
+  const lecturesWithImages = lecturesData.filter(lecture => lecture.image); // 이미지가 있는 포스터만
+  const lectures = lecturesWithImages.slice(0, 4);
 
   return (
     <div className="home-container">
@@ -32,15 +34,15 @@ const Home = () => {
       {/* 포스터 리스트 */}
       <div className="posters">
         {activeTab === "exhibitions" &&
-          posters.map((poster) => (
-            <div key={poster.id} className="poster-item">
-              {poster.image ? (
-                <img src={poster.image} alt={poster.title} />
+          exhibtions.map((exhibtion) => (
+            <div key={exhibtion.id} className="poster-item">
+              {exhibtion.image ? (
+                <img src={exhibtion.image} alt={exhibtion.title} />
               ) : (
-                <div className="no-image">이미지 없음</div>
+                <div className="no-image">포스터없음</div>
               )}
-              <h2>{poster.title}<em>{poster.desc}</em></h2>
-              <p>{poster.date}</p>
+              <h2>{exhibtion.title}<em>{exhibtion.desc}</em></h2>
+              <p>{exhibtion.date}</p>
             </div>
           ))}
 
@@ -50,9 +52,9 @@ const Home = () => {
               {lecture.image ? (
                 <img src={lecture.image} alt={lecture.title || lecture.name} />
               ) : (
-                <div className="no-image">이미지 없음</div>
+                <div className="no-image">포스터없음</div>
               )}
-              <h2>{lecture.title || lecture.name}</h2>
+              <h2>{lecture.title}<em>{lecture.SLI}</em></h2>
               <p>{lecture.date}</p>
             </div>
           ))}

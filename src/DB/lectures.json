@@ -1,0 +1,183 @@
+[
+    {
+        "id":29,
+        "title": "아트 컬렉팅과 미술품 투자 전략",
+        "SLI": "김정환 작가",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/exh/spc_2024_11_16.png?raw=true",
+        "date" : "2024.11.16."
+    },
+    {
+        "id":28,
+        "title": "행복한 미술애호가 입문과 예술의 역할",
+        "SLI": "김윤섭 소장",
+        "date" : "2024.06.15."
+    },
+    {
+        "id":27,
+        "title": "미술전문기자가 본 현대미술",
+        "SLI": "뉴시스 박현주 기자",
+        "date" : "2024.01.20."
+    },
+    {
+        "id":26,
+        "title": "초보 콜렉터를 위한 그림이야기Ⅴ",
+        "SLI": "김형진 관장",
+        "date" : "2023.09.09."
+    },
+    {
+        "id":25,
+        "title": "이승철 교수의 한지 이야기, 유럽과 미주지역 순회전 이야기",
+        "SLI": "이승철 교수",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/exh/spc_2023_06_10.png?raw=true",
+        "date" : "2023.06.10."
+    },
+    {
+        "id":24,
+        "title": "새로운 문화환경 21C와 한국 미술의 가능성",
+        "SLI": "김상철 교수",
+        "date" : "2023.04.08."
+    },
+    {
+        "id":23,
+        "title": "초보 콜렉터를 위한 그림이야기Ⅳ",
+        "SLI": "김형진 관장",
+        "date" : "2023.03.11."
+    },
+    {
+        "id":22,
+        "title": "초보 콜렉터를 위한 그림이야기Ⅲ",
+        "SLI": "김형진 관장",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/exh/spc_2022_12_10.png?raw=true",
+        "date" : "2022.12.10."
+    },
+    {
+        "id":21,
+        "title": "초보 콜렉터를 위한 그림이야기Ⅱ",
+        "SLI": "김형진 관장",
+        "date" : "2022.09.24."
+    },
+    {
+        "id":20,
+        "title": "초보 콜렉터를 위한 그림이야기Ⅰ",
+        "SLI": "김형진 관장",
+        "date" : "2022.06.25."
+    },
+    {
+        "id":19,
+        "title": "2022 아트마켓 트랜드 & 향후전망",
+        "SLI": "미술평론가, 한국미술경영연구소 김윤섭 소장",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/exh/spc_2022_05_14.png?raw=true",
+        "date" : "2022.05.14."
+    },
+    {
+        "id":18,
+        "title": "2부 작가와의 만남",
+        "SLI": "서수영 작가",
+        "date" : "2022.03.26."
+    },
+    {
+        "id":17,
+        "title": "1부 미술의 권력이동, 현대 미술의 현황과 향후 전망",
+        "SLI": "전준엽 작가",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/exh/spc_2022_03_26.png?raw=true",
+        "date" : "2022.03.26."
+    },
+    {
+        "id":16,
+        "title": "2부 작가와의 만남",
+        "SLI": "박영학 작가",
+        "date" : "2021.11.06."
+    },
+    {
+        "id":15,
+        "title": "1부 미술특강",
+        "SLI": "김형진 관장",
+        "date" : "2021.11.06."
+    },
+    {
+        "id":14,
+        "title": "2부 Timelessness 1994 ~ 2020",
+        "SLI": "서수영 작가",
+        "date" : "2020.11.28."
+    },
+    {
+        "id":13,
+        "title": "1부 국내 해외 미술시장의 흐름",
+        "SLI": "이지민 부장",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/exh/spc_2020_11_28.png?raw=true",
+        "date" : "2020.11.28."
+    },
+    {
+        "id":12,
+        "title": "2020 수원문화재단 아트뱅크기획 ｜ 2부 일상에서 미술을 활용 할 수 있는 노하우와 전시 작가 작품 소개",
+        "SLI": "김형진 관장",
+        "date" : "2020.11.07."
+    },
+    {
+        "id":11,
+        "title": "2020 수원문화재단 아트뱅크기획 ｜ 1부 미술 시장과 투자 2020",
+        "SLI": "구기수 미술평론가",
+        "date" : "2020.11.07."
+    },
+    {
+        "id":10,
+        "title": "미술품 컬렉션의 의미와 가치",
+        "SLI": "서울 FM갤러리 배기성 대표",
+        "date" : "2020.09.19."
+    },
+    {
+        "id":9,
+        "title": "2부 그림속에 나타난 금 이야기",
+        "SLI": "서수영 작가",
+        "date" : "2020.06.27."
+    },
+    {
+        "id":8,
+        "title": "1부 2020 미술시장 트렌드와 미술품의 경제적 가치",
+        "SLI": "김형진 관장",
+        "date" : "2020.06.27."
+    },
+    {
+        "id":7,
+        "title": "2019년 미술시장트렌드와 김환기, 박수근, 홍일화의 미술세계",
+        "SLI": "김형진 관장",
+        "date" : "2020.06.16."
+    },
+    {
+        "id":6,
+        "title": "2부 서화가 작가와의 만남",
+        "SLI": "손동준 작가",
+        "date" : "2018.10.20."
+    },
+    {
+        "id":5,
+        "title": "1부 서예와 현대미술의 매력적인 만남",
+        "SLI": "한국미술경영연구소 김윤섭 소장",
+        "date" : "2018.10.20."
+    },
+    {
+        "id":4,
+        "title": "이제 자산관리는 투자인가 예술인가?",
+        "SLI": "엄길청 교수, 김형진 관장",
+        "date" : "2018.09.05."
+    },
+    {
+        "id":3,
+        "title": "유망 중견작가 그림 설명회",
+        "SLI": "한국미술경영연구소 김윤섭 소장",
+        "date" : "2018.06.02."
+    },
+    {
+        "id":2,
+        "title": "Interlace 동서양미술의 교차",
+        "SLI": "홍일화 작가",
+        "date" : "2018.03.17."
+    },
+    {
+        "id":1,
+        "title": "나를 매혹시킨 현대 미술의 매력과 미술품의 경제적 가치",
+        "SLI": "한국미술경영연구소 김윤섭 소장",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/exh/spc_2018_02_04.png?raw=true",
+        "date" : "2018.02.04."
+    }
+]

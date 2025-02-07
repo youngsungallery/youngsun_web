@@ -19,7 +19,7 @@ const Header = () => {
               <li><a href="/video" aria-label="특강 페이지로 이동">특강</a></li>
               <li><a href="/" aria-label="전시 페이지로 이동">전시</a></li>
               <li><a href="/" aria-label="컬럼 페이지로 이동">컬럼</a></li>
-              <li><a href="/" aria-label="기록 페이지로 이동">기록</a></li>
+              <li><a href="/History" aria-label="기록 페이지로 이동">기록</a></li>
             </ul>
           </nav>
         </div>
