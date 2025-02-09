@@ -7,9 +7,9 @@ const Home = () => {
 
   // 최신 4개 데이터만 가져오기 (id 기준 역순)
   const exhibtionsWithImages = exhibitionsData.filter(exhibtion => exhibtion.image); // 이미지가 있는 포스터만
-  const exhibtions = exhibtionsWithImages.slice(0, 4);
+  const exhibtions = exhibtionsWithImages.map((exhibtion, index) => index < 4 ? exhibtionsWithImages[index] : null).filter(item => item !== null);  // 4개만 남기고 null 값은 제거
   const lecturesWithImages = lecturesData.filter(lecture => lecture.image); // 이미지가 있는 포스터만
-  const lectures = lecturesWithImages.slice(0, 4);
+  const lectures = lecturesWithImages.map((lecture, index) => index < 4 ? lecturesWithImages[index] : null).filter(item => item !== null);  // 4개만 남기고 null 값은 제거
 
   return (
     <div className="home-container">
