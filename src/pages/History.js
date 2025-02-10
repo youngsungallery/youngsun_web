@@ -2,7 +2,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import History from "@/components/History";
 
-const IndexPage = () => {
+const history = () => {
     return (
       <div>
         <Header />
@@ -12,4 +12,4 @@ const IndexPage = () => {
     );
   }
   
-  export default IndexPage;
+  export default history;

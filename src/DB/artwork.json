@@ -1,0 +1,146 @@
+[
+    {
+        "code": "YS001",
+        "title": "Concept",
+        "artist": "A. R. Penck",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS1.png?raw=true",
+        "size": "65 X 93.3cm",
+        "technique": "인그레이빙",
+        "year": "1983"
+    },
+    {
+        "code": "YS002",
+        "title": "Idea For Sculpture NO3",
+        "artist": "A. R. Penck",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS2.png?raw=true",
+        "size": "60.5 X 80.5cm",
+        "technique": "stone lithograph-black and white",
+        "year": "1984"
+    },
+    {
+        "code": "YS003",
+        "title": "View of The Rock",
+        "artist": "A. R. Penck",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS3.png?raw=true",
+        "size": "60 X 81.5cm",
+        "technique": "stone Lithgraph-3colours",
+        "year": "1983"
+    },
+    {
+        "code": "YS004",
+        "title": "Keep Me Near Ghost",
+        "artist": "Adam Handler",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS4.png?raw=true",
+        "size": "61 X 50.5cm",
+        "technique": "캔버스에 아크릴, 오일스틱",
+        "year": "2022"
+    },
+    {
+        "code": "YS005",
+        "title": "Untitled",
+        "artist": "Alexander Calder",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS5.png?raw=true",
+        "size": "58.5 X 44.5cm",
+        "technique": "Lithography",
+        "year": "1980"
+    },
+    {
+        "code": "YS006",
+        "title": "Dancer",
+        "artist": "Andreas Emeius",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS6.png?raw=true",
+        "size": "23 X 30cm",
+        "technique": "Acrylic, Oil on Marker on Paper",
+        "year": "2019"
+    },
+    {
+        "code": "YS007",
+        "title": "Clau15",
+        "artist": "Antoni Tapies",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS7.png?raw=true",
+        "size": "34 X 50cm",
+        "technique": "Lithography",
+        "year": "1973"
+    },
+    {
+        "code": "YS008",
+        "title": "Liambrec3",
+        "artist": "Antoni Tapies",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS8.png?raw=true",
+        "size": "42.5 X 32cm",
+        "technique": "Lithography",
+        "year": "1975"
+    },
+    {
+        "code": "YS009",
+        "title": "Silenci",
+        "artist": "Antoni Tapies",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS9.png?raw=true",
+        "size": "40 X 55cm",
+        "technique": "Lithography",
+        "year": "1971"
+    },
+    {
+        "code": "YS010",
+        "title": "도어록",
+        "artist": "David Hockney",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS10.png?raw=true",
+        "size": "",
+        "technique": "",
+        "year": "2018"
+    },
+    {
+        "code": "YS011",
+        "title": "Bitter Peace",
+        "artist": "David Lehmann",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS11.png?raw=true",
+        "size": "61 X 46cm",
+        "technique": "Turmeic, Watercolor, Ink and Gouache on Watercolor Paper",
+        "year": "2021"
+    },
+    {
+        "code": "YS012",
+        "title": "Juntos",
+        "artist": "Eva Armisen",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS12.png?raw=true",
+        "size": "80.0 X 59.9cm",
+        "technique": "Screen Print",
+        "year": ""
+    },
+    {
+        "code": "YS013",
+        "title": "mask",
+        "artist": "Javier Calleja",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS13.png?raw=true",
+        "size": "",
+        "technique": "",
+        "year": ""
+    },
+    {
+        "code": "YS014",
+        "title": "Ballon Dog (Magenta)",
+        "artist": "Jeff Koons",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS14.png?raw=true",
+        "size": "26.7 X 26.7 X 12.7cm",
+        "technique": "Poreelain",
+        "year": "2015"
+    },
+    {
+        "code": "YS015",
+        "title": "CALDOR",
+        "artist": "Jin Meyerson",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS15.png?raw=true",
+        "size": "162 X 130cm",
+        "technique": "Oil on Canvas",
+        "year": "2021"
+    },
+    {
+        "code": "YS016",
+        "title": "Globetrotter",
+        "artist": "Jin Meyerson",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS16.png?raw=true",
+        "size": "150 X 90cm",
+        "technique": "Oil on Canvas",
+        "year": "2019"
+    }
+]
