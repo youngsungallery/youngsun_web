@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import artworksData from '../DB/artwork.json'; // 작품 데이터
-import artistsData from '../DB/artist.json'; // 작가 데이터
 
 const Artworks = () => {
   const [visibleCount, setVisibleCount] = useState(6); // 처음에 보여줄 작품 개수
@@ -52,10 +51,10 @@ const Artworks = () => {
               </div>
               <div className="artwork-info">
                 <h3>{artwork.title}</h3>
-                <p><strong>작가:</strong> {artwork.artist}</p>
-                <p><strong>크기:</strong> {artwork.size}</p>
-                <p><strong>기법:</strong> {artwork.technique}</p>
-                <p><strong>연도:</strong> {artwork.year}</p>
+                <p>{artwork.artist}</p>
+                <p>{artwork.size}</p>
+                <p>{artwork.technique}</p>
+                <p>{artwork.year}</p>
               </div>
             </div>
           ))}

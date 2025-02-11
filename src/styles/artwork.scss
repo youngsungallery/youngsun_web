@@ -14,7 +14,7 @@
     /* ✅ 작가 목록 스타일 */
     .artist-list {
         width: 30%;
-        max-height: 400px; /* 스크롤을 적용할 높이 */
+        max-height: 250px; /* 스크롤을 적용할 높이 */
         overflow-y: auto; /* 세로 스크롤 활성화 */
         display: block; /* flex 사용 충돌 방지 */
         padding-right: 10px;
