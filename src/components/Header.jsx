@@ -18,7 +18,7 @@ const Header = () => {
               <li><a href="/" aria-label="홈 페이지로 이동">전시일정</a></li>
               <li><a href="/video" aria-label="특강 페이지로 이동">특강</a></li>
               <li><a href="/artwork" aria-label="작품리스트 페이지로 이동">작품</a></li>
-              <li><a href="/history" aria-label="기록 페이지로 이동">기록</a></li>
+              <li><a href="/Historypage" aria-label="기록 페이지로 이동">기록</a></li>
             </ul>
           </nav>
         </div>
