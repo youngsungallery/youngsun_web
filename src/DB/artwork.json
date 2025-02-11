@@ -142,5 +142,23 @@
         "size": "150 X 90cm",
         "technique": "Oil on Canvas",
         "year": "2019"
+    },
+    {
+        "code": "YS017",
+        "title": "GOD PARTICLE 2",
+        "artist": "Jin Meyerson",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS17.png?raw=true",
+        "size": "53.5 X 45cm",
+        "technique": "Oil on Canvas",
+        "year": "2022"
+    },
+    {
+        "code": "YS018",
+        "title": "Untitled",
+        "artist": "Joan Miro",
+        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS18.png?raw=true",
+        "size": "58.5 X 44.5cm",
+        "technique": "Lithography",
+        "year": "1980년대"
     }
 ]

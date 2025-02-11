@@ -41,6 +41,10 @@
     },
     {
         "artist": "Jin Meyerson",
-        "artworks": ["YS015", "YS016"]
+        "artworks": ["YS015", "YS016", "YS017"]
+    },
+    {
+        "artist": "Joan Miro",
+        "artworks": ["YS018"]
     }
   ]

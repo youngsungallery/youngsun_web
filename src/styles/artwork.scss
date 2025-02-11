@@ -8,38 +8,52 @@
     .content-wrapper {
         display: flex;
         width: 100%;
-        height: 100%;
+        height: auto; /* 부모 높이를 자동 조절 */
+    }
 
-        .artist-list {
-            width: 30%;
-            max-height: 400px; /* 높이를 적당히 조정 */
-            overflow-y: auto; /* 세로 스크롤 적용 */
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 15px;
-            padding-right: 10px;
-            border-right: 2px solid #ccc;
-        
-            .artist-name {
+    /* ✅ 작가 목록 스타일 */
+    .artist-list {
+        width: 30%;
+        max-height: 400px; /* 스크롤을 적용할 높이 */
+        overflow-y: auto; /* 세로 스크롤 활성화 */
+        display: block; /* flex 사용 충돌 방지 */
+        padding-right: 10px;
+        border-right: 2px solid #ccc;
+
+        .artist-name {
             font-size: 1.2rem;
             cursor: pointer;
             color: #333;
-            
+            padding: 5px 0;
+
             &:hover {
                 color: #007BFF;
                 text-decoration: underline;
-                }
             }
         }
+
+        /* ✅ 스크롤 커스텀 스타일 */
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #999;
+            border-radius: 4px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: #f1f1f1;
+        }
     }
-  
+
+    /* 작품 정보 영역 */
     .artwork-info-container {
         width: 70%;
         display: flex;
         flex-direction: column;
         gap: 20px;
-  
+
         .artwork {
             display: flex;
             gap: 20px;
@@ -47,7 +61,7 @@
             border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    
+
             .artwork-image {
                 width: 20%;
                 
@@ -63,17 +77,17 @@
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
-        
+
                 h3 {
                     font-size: 1.5rem;
                     font-weight: bold;
                 }
-        
+
                 p {
                     font-size: 1rem;
                     color: #555;
-                    argin: 5px 0;
-                
+                    margin: 5px 0;
+
                     strong {
                         font-weight: bold;
                     }
@@ -81,7 +95,8 @@
             }
         }
     }
-  
+
+    /* "더보기" 버튼 스타일 */
     .load-more-button {
         background-color: #007BFF;
         color: white;
@@ -91,7 +106,7 @@
         cursor: pointer;
         font-size: 1rem;
         transition: background-color 0.3s;
-  
+
         &:hover {
             background-color: #0056b3;
         }
