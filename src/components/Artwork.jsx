@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import artworksData from '../DB/artwork.json'; // 작품 데이터
 
+const baseURL = "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/";
+
 const Artworks = () => {
   const [visibleCount, setVisibleCount] = useState(6); // 처음에 보여줄 작품 개수
   const [uniqueArtists, setUniqueArtists] = useState([]); // 유니크한 작가 목록
@@ -47,7 +49,10 @@ const Artworks = () => {
           {filteredArtworks.slice(0, visibleCount).map((artwork) => (
             <div className="artwork" key={artwork.code}>
               <div className="artwork-image">
-                <img src={artwork.image} alt={artwork.title} />
+              <img 
+                  src={`${baseURL}${artwork.code}.png?raw=true`} 
+                  alt={artwork.title} 
+                />
               </div>
               <div className="artwork-info">
                 <h3>{artwork.title}</h3>

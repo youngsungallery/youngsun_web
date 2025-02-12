@@ -1,164 +1,282 @@
 [
     {
-        "code": "YS001",
+        "code": "YS1",
         "title": "Concept",
         "artist": "A. R. Penck",
-        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS1.png?raw=true",
         "size": "65 X 93.3cm",
         "technique": "인그레이빙",
         "year": "1983"
     },
     {
-        "code": "YS002",
+        "code": "YS2",
         "title": "Idea For Sculpture NO3",
         "artist": "A. R. Penck",
-        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS2.png?raw=true",
         "size": "60.5 X 80.5cm",
         "technique": "stone lithograph-black and white",
         "year": "1984"
     },
     {
-        "code": "YS003",
+        "code": "YS3",
         "title": "View of The Rock",
         "artist": "A. R. Penck",
-        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS3.png?raw=true",
         "size": "60 X 81.5cm",
         "technique": "stone Lithgraph-3colours",
         "year": "1983"
     },
     {
-        "code": "YS004",
+        "code": "YS4",
         "title": "Keep Me Near Ghost",
         "artist": "Adam Handler",
-        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS4.png?raw=true",
         "size": "61 X 50.5cm",
         "technique": "캔버스에 아크릴, 오일스틱",
         "year": "2022"
     },
     {
-        "code": "YS005",
+        "code": "YS5",
         "title": "Untitled",
         "artist": "Alexander Calder",
-        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS5.png?raw=true",
         "size": "58.5 X 44.5cm",
         "technique": "Lithography",
         "year": "1980"
     },
     {
-        "code": "YS006",
+        "code": "YS6",
         "title": "Dancer",
         "artist": "Andreas Emeius",
-        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS6.png?raw=true",
         "size": "23 X 30cm",
         "technique": "Acrylic, Oil on Marker on Paper",
         "year": "2019"
     },
     {
-        "code": "YS007",
+        "code": "YS7",
         "title": "Clau15",
         "artist": "Antoni Tapies",
-        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS7.png?raw=true",
         "size": "34 X 50cm",
         "technique": "Lithography",
         "year": "1973"
     },
     {
-        "code": "YS008",
+        "code": "YS8",
         "title": "Liambrec3",
         "artist": "Antoni Tapies",
-        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS8.png?raw=true",
         "size": "42.5 X 32cm",
         "technique": "Lithography",
         "year": "1975"
     },
     {
-        "code": "YS009",
+        "code": "YS9",
         "title": "Silenci",
         "artist": "Antoni Tapies",
-        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS9.png?raw=true",
         "size": "40 X 55cm",
         "technique": "Lithography",
         "year": "1971"
     },
     {
-        "code": "YS010",
+        "code": "YS10",
         "title": "도어록",
         "artist": "David Hockney",
-        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS10.png?raw=true",
         "size": "",
         "technique": "",
         "year": "2018"
     },
     {
-        "code": "YS011",
+        "code": "YS11",
         "title": "Bitter Peace",
         "artist": "David Lehmann",
-        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS11.png?raw=true",
         "size": "61 X 46cm",
         "technique": "Turmeic, Watercolor, Ink and Gouache on Watercolor Paper",
         "year": "2021"
     },
     {
-        "code": "YS012",
+        "code": "YS12",
         "title": "Juntos",
         "artist": "Eva Armisen",
-        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS12.png?raw=true",
         "size": "80.0 X 59.9cm",
         "technique": "Screen Print",
         "year": ""
     },
     {
-        "code": "YS013",
+        "code": "YS13",
         "title": "mask",
         "artist": "Javier Calleja",
-        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS13.png?raw=true",
         "size": "",
         "technique": "",
         "year": ""
     },
     {
-        "code": "YS014",
+        "code": "YS14",
         "title": "Ballon Dog (Magenta)",
         "artist": "Jeff Koons",
-        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS14.png?raw=true",
         "size": "26.7 X 26.7 X 12.7cm",
         "technique": "Poreelain",
         "year": "2015"
     },
     {
-        "code": "YS015",
+        "code": "YS15",
         "title": "CALDOR",
         "artist": "Jin Meyerson",
-        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS15.png?raw=true",
         "size": "162 X 130cm",
         "technique": "Oil on Canvas",
         "year": "2021"
     },
     {
-        "code": "YS016",
+        "code": "YS16",
         "title": "Globetrotter",
         "artist": "Jin Meyerson",
-        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS16.png?raw=true",
         "size": "150 X 90cm",
         "technique": "Oil on Canvas",
         "year": "2019"
     },
     {
-        "code": "YS017",
+        "code": "YS17",
         "title": "GOD PARTICLE 2",
         "artist": "Jin Meyerson",
-        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS17.png?raw=true",
         "size": "53.5 X 45cm",
         "technique": "Oil on Canvas",
         "year": "2022"
     },
     {
-        "code": "YS018",
+        "code": "YS18",
         "title": "Untitled",
         "artist": "Joan Miro",
-        "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/art/YS18.png?raw=true",
         "size": "58.5 X 44.5cm",
         "technique": "Lithography",
         "year": "1980년대"
+    },
+    {
+        "code": "YS19",
+        "title": "Untitled",
+        "artist": "Joan Miro",
+        "size": "58.5 X 44.5cm",
+        "technique": "Lithography",
+        "year": "1980년대"
+    },
+    {
+        "code": "YS20",
+        "title": "Untitled",
+        "artist": "Joan Miro",
+        "size": "58.5 X 44.5cm",
+        "technique": "Lithography",
+        "year": "1980년대"
+    },
+    {
+        "code": "YS21",
+        "title": "Companition (Grey, Brown, Blush)",
+        "artist": "Kaws",
+        "size": "12.7 X 7.6 X 27.9cm",
+        "technique": "혼합재료",
+        "year": "2016"
+    },
+    {
+        "code": "YS22",
+        "title": "호박",
+        "artist": "Kusama Yaoi",
+        "size": "90 X 32cm",
+        "technique": "아트상품",
+        "year": ""
+    },
+    {
+        "code": "YS23",
+        "title": "Untitled",
+        "artist": "Marc Chagall",
+        "size": "58.5 X 44.5cm",
+        "technique": "Lithography",
+        "year": "1980"
+    },
+    {
+        "code": "YS24",
+        "title": "Soir de Mai",
+        "artist": "Michel Delacroix",
+        "size": "49.6 X 60.6cm",
+        "technique": "Lithography",
+        "year": ""
+    },
+    {
+        "code": "YS25",
+        "title": "Anytime, Anywhere",
+        "artist": "Mr.",
+        "size": "70 X 56cm",
+        "technique": "Offset Print",
+        "year": "2020"
+    },
+    {
+        "code": "YS26",
+        "title": "Im Just  Waiting on a Friend",
+        "artist": "Mr.",
+        "size": "70 X 56cm",
+        "technique": "Offset Print",
+        "year": "2020"
+    },
+    {
+        "code": "YS27",
+        "title": "My Street",
+        "artist": "Mr.",
+        "size": "65 X 65cm",
+        "technique": "Offset Print",
+        "year": "2020"
+    },
+    {
+        "code": "YS28",
+        "title": "Orange Wind",
+        "artist": "Mr.",
+        "size": "70 X 56cm",
+        "technique": "Offset Print",
+        "year": "2020"
+    },
+    {
+        "code": "YS29",
+        "title": "Song That Never Ends",
+        "artist": "Mr.",
+        "size": "65 X 65cm",
+        "technique": "Offset Print",
+        "year": "2020"
+    },
+    {
+        "code": "YS30",
+        "title": "Doraemon",
+        "artist": "Murakami Takashi",
+        "size": "57.4 X 65.5cm",
+        "technique": "",
+        "year": "2021"
+    },
+    {
+        "code": "YS31",
+        "title": "No Nukes!",
+        "artist": "Nara Yoshitomo",
+        "size": "29.8 X 21cm",
+        "technique": "Poster",
+        "year": ""
+    },
+    {
+        "code": "YS32",
+        "title": "Bust of a Woman Hat",
+        "artist": "Pablo Picasso",
+        "size": "27 X 22.2cm",
+        "technique": "지클레이 프린트",
+        "year": ""
+    },
+    {
+        "code": "YS33",
+        "title": "등대",
+        "artist": "Ramine",
+        "size": "29.5 X 20.5cm",
+        "technique": "드로잉",
+        "year": "2020"
+    },
+    {
+        "code": "YS34",
+        "title": "정물화",
+        "artist": "Roland ST. Hubert",
+        "size": "88 X 60cm",
+        "technique": "Acrylic on Canvas",
+        "year": ""
+    },
+    {
+        "code": "YS35",
+        "title": "It's time to get drink",
+        "artist": "Si on",
+        "size": "88 X 60cm",
+        "technique": "Acrylic on Canvas",
+        "year": ""
     }
 ]
