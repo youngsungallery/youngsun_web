@@ -28,3 +28,6 @@ $highlight-text-color: $silver-color; // 강조 텍스트 색상 (은색)
 $button-background: $red-color; // 버튼 배경색 (빨간색)
 $button-text-color: #fff; // 버튼 텍스트 색상 (흰색)
 $button-hover-background: darken($red-color, 10%); // 버튼 hover 색상
+
+// 햄버거 메뉴
+$header-nav-mobile-color: #000;

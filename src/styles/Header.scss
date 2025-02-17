@@ -1,5 +1,6 @@
 /* src/styles/Header.scss */
 @import './variables';
+@import './mixin.scss';
 
 .skip-link {
         position: absolute;
@@ -18,19 +19,18 @@
     outline: 2px solid #ff9900;
 }
   
-header {
+#header {
     background-color: $background-color;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
 
-    .container {
+    .header__inner {
         width: 100%;
-        max-width: 1200px;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        .logo {
+        .header__logo {
             a {
                 font-size: 30px;
                 font-weight: 600;
@@ -38,11 +38,12 @@ header {
                 text-decoration: none;
             }
         }
-        nav {
+        .header__nav {
             ul {
                 display: flex;
                 gap: 20px;
                 list-style: none;
+                text-align: right;
 
                 li {
                     position: relative;
@@ -69,6 +70,83 @@ header {
                         }
                     }
                 }
+            }
+
+            @media (max-width:800px) {
+                display: none;
+
+                &.show {
+                    display: block;
+    
+                    ul {
+                        display: block;
+                        position: absolute;
+                        width: 140px;
+                        right: 0;
+                        top: 84px;
+                        background: $background-color;
+                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                        backdrop-filter: blur(15px);
+                        z-index: 1000;
+    
+                        li {
+                            display: block;
+                            text-align: right;
+                            a {
+                                display: inline-block;
+                                padding: 10px;
+                            }
+                        }
+                    }
+                }
+                &.show + .header__nav__mobile span::before {
+                    width: 20px;
+                }
+                &.show + .header__nav__mobile span::after {
+                    width: 20px;
+                }
+            }
+        }
+        .header__nav__mobile {
+            width: 40px;
+            height: 40px;
+            @include flex-center;
+            cursor: pointer;
+            display: none;
+    
+            span {
+                display: block;
+                width: 40px;
+                height: 2px;
+                background-color: $header-nav-mobile-color;
+                position: relative;
+                margin-top: 19px;
+    
+                &::before {
+                    content: "";
+                    width: 40px;
+                    height: 2px;
+                    background-color: $header-nav-mobile-color;
+                    position: absolute;
+                    right: 0;
+                    top: 6px;
+                    transition: width 0.3s;
+                }
+    
+                &::after {
+                    content: "";
+                    width: 40px;
+                    height: 2px;
+                    background-color: $header-nav-mobile-color;
+                    position: absolute;
+                    left: 0;
+                    bottom: 6px;
+                    transition: width 0.3s;
+                }
+            }
+
+            @media (max-width:800px) {
+                display: block;
             }
         }
     }

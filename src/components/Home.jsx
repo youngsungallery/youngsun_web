@@ -1,15 +1,32 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import exhibitionsData from '../DB/exhibitions.json'; // 전시 데이터
 import lecturesData from '../DB/lectures.json'; // 특강 데이터
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState("exhibitions"); // 기본 탭 설정
+  const [visibleCount, setVisibleCount] = useState(4); // 기본값: 4개
 
-  // 최신 4개 데이터만 가져오기 (id 기준 역순)
-  const exhibtionsWithImages = exhibitionsData.filter(exhibtion => exhibtion.image); // 이미지가 있는 포스터만
-  const exhibtions = exhibtionsWithImages.map((exhibtion, index) => index < 4 ? exhibtionsWithImages[index] : null).filter(item => item !== null);  // 4개만 남기고 null 값은 제거
-  const lecturesWithImages = lecturesData.filter(lecture => lecture.image); // 이미지가 있는 포스터만
-  const lectures = lecturesWithImages.map((lecture, index) => index < 4 ? lecturesWithImages[index] : null).filter(item => item !== null);  // 4개만 남기고 null 값은 제거
+  //반응형 : 화면 크기에 따라 visibleCount 변경
+  useEffect(() => {
+    const updateCount = () => {
+      if (window.innerWidth <= 850) {
+        setVisibleCount(2);
+      } else if (window.innerWidth <= 1100) {
+        setVisibleCount(3);
+      } else {
+        setVisibleCount(4);
+      }
+    };
+
+    window.addEventListener("resize", updateCount);
+    updateCount();
+
+    return () => window.removeEventListener("resize", updateCount);
+  }, []);
+
+  // 최신 visibleCount개 데이터만 가져오기 (이미지 있는 포스터만 필터링)
+  const exhibtions = exhibitionsData.filter(exhibtion => exhibtion.image).slice(0, visibleCount);
+  const lectures = lecturesData.filter(lecture => lecture.image).slice(0, visibleCount);
 
   return (
     <div className="home-container">

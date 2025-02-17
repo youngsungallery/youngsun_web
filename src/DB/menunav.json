@@ -1,0 +1,22 @@
+[
+    {
+        "title": "전시일정",
+        "url": "/"
+    },
+    {
+        "title": "Art News",
+        "url": "/Newspage"
+    },
+    {
+        "title": "특강",
+        "url": "/video"
+    },
+    {
+        "title": "작품",
+        "url": "/artwork"
+    },
+    {
+        "title": "기록",
+        "url": "/Historypage"
+    }
+]
