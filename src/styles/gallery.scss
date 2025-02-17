@@ -27,14 +27,14 @@ a {
 }
 
 button {
-  background-color: $button-background;  // 버튼 배경 (빨간색)
+  background-color: $button-background-red;  // 버튼 배경 (빨간색)
   color: $button-text-color; // 버튼 텍스트 색상 (흰색)
   border: none;
   padding: 10px 20px;
   cursor: pointer;
 
   &:hover {
-    background-color: $button-hover-background; // 버튼 hover 색상
+    background: darken($red-color, 20%); // 버튼 hover 색상
   }
 }
 

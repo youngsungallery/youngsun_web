@@ -4,6 +4,7 @@
 $silver-color: #a2abf8;  // 은색
 $gold-color: #c6acf8;    // 금색
 $red-color: #FF5733;     // 빨간색
+$blue-color: #0056b3;     // 파랑색
 
 // 배경 색상
 $background-color: #f4f4f4;  // 전체 배경
@@ -17,17 +18,17 @@ $footer-text-color: #fff;    // 푸터 텍스트 색상 (흰색)
 $hover-text-color: #007bff;
 
 // 링크 색상
-$link-color: $red-color;     // 링크 색상 (빨간색)
-$link-hover-color: darken($red-color, 10%);  // 링크 hover 색상 (약간 어두운 빨간색)
+$link-color: $blue-color;     // 링크 색상 (파랑색)
+$link-hover-color: darken($blue-color, 20%);  // 링크 hover 색상 (약간 어두운 파랑색)
 
 // 강조 색상
 $highlight-color: $gold-color; // 강조 색상 (금색)
 $highlight-text-color: $silver-color; // 강조 텍스트 색상 (은색)
 
 // 버튼 색상
-$button-background: $red-color; // 버튼 배경색 (빨간색)
+$button-background-red: $red-color; // 버튼 배경색 (빨간색)
+$button-background-blue: $blue-color; // 버튼 배경색 (파랑색)
 $button-text-color: #fff; // 버튼 텍스트 색상 (흰색)
-$button-hover-background: darken($red-color, 10%); // 버튼 hover 색상
 
 // 햄버거 메뉴
 $header-nav-mobile-color: #000;

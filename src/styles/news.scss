@@ -31,7 +31,7 @@
   
   .news-container ul li a {
     text-decoration: none;
-    color: $link-color;
+    color: $text-color;
     font-weight: bold;
     transition: color 0.3s;
   }
@@ -47,7 +47,7 @@
   }
   
   button {
-    background-color: $button-background;
+    background-color: $button-background-blue;
     color: $button-text-color;
     padding: 10px 20px;
     border: none;
@@ -58,10 +58,10 @@
   }
   
   button:hover {
-    background-color: $button-hover-background;
+    background: darken($button-background-blue, 20%);
   }
   
   button:disabled {
-    background-color: lighten($button-background, 20%);
+    background-color: lighten($button-background-blue, 20%);
     cursor: not-allowed;
   }
