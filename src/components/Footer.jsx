@@ -1,39 +1,6 @@
 import React, {useState} from "react";
 
 const Footer = () => {
-    const [showForm, setShowForm] = useState(false);
-    const [kakaoId, setKakaoId] = useState("");
-    const [message, setMessage] = useState("");
-
-    const handleSubscribe = async (e) => {
-        e.preventDefault();
-        setMessage("");
-
-        if (!kakaoId.trim()) {
-            return setMessage("카카오톡 ID를 입력해주세요!");
-        }
-
-        try {
-            const res = await fetch("/api/subscribe", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ kakaoId }),
-            });
-
-            const data = await res.json();
-
-            if (res.ok) {
-                setMessage("✅ 구독 신청이 완료되었습니다!");
-                setKakaoId("");
-                setShowForm(false);
-            } else {
-                setMessage(`❌ ${data.message}`);
-            }
-        } catch (error) {
-            setMessage("❌ 오류가 발생했습니다. 다시 시도해주세요.");
-        }
-    };
-
     return (
         <footer id="footer" role="contentinfo">
             <div className="footer__inner">
@@ -42,27 +9,6 @@ const Footer = () => {
                     <span>© youngsungallery All rights reserved</span>
                 </div>
                 <div className="footer__info">
-                    <div className="left">
-                        <div className="title">
-                            <button onClick={() => setShowForm(!showForm)} className="subscribe-btn">
-                                구독하기
-                            </button>
-                            <em>구독하시면, 카카오톡으로 새로운 포스터가 발송됩니다.</em>
-
-                            {showForm && (
-                                <form onSubmit={handleSubscribe} className="subscribe-form">
-                                    <input
-                                        type="text"
-                                        placeholder="카카오톡 ID를 입력하세요"
-                                        value={kakaoId}
-                                        onChange={(e) => setKakaoId(e.target.value)}
-                                    />
-                                    <button type="submit">신청</button>
-                                </form>
-                            )}
-                            {message && <p className="subscribe-message">{message}</p>}
-                        </div>
-                    </div>
                     <div className="right">
                         <h3>social</h3>
                         <ul>
