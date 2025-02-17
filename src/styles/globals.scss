@@ -5,66 +5,58 @@
 @import './video.scss';
 @import './artwork.scss';
 @import './news.scss';
+@import './footer.scss';
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Noto Sans KR', sans-serif;
-  background-color: $background-color; // 전체 배경
-  color: $text-color; // 기본 텍스트 색상
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: $background-color; // 전체 배경
+    color: $text-color; // 기본 텍스트 색상
 }
 
 h1, h2, h3 {
-  color: $header-text-color; // 헤더 텍스트 색상 (다크 텍스트)
+    color: $header-text-color; // 헤더 텍스트 색상 (다크 텍스트)
 }
 
 a {
-  color: $link-color;  // 링크 색상 (빨간색)
-  text-decoration: none;
+    color: $link-color;  // 링크 색상 (빨간색)
+    text-decoration: none;
 
-  &:hover {
-    color: $link-hover-color; // 링크 hover 색상 (어두운 빨간색)
-  }
+    &:hover {
+        color: $link-hover-color; // 링크 hover 색상 (어두운 빨간색)
+    }
 }
 
 em, address {
     font-style: normal;
 }
 
-button {
-  background-color: $blue-color;  // 버튼 배경 (빨간색)
-  color: $button-text-color; // 버튼 텍스트 색상 (흰색)
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
+/* 블릿기호 초기화 */
+ul, li, ol {list-style:none;}
 
-  &:hover {
-    background: darken($blue-color, 20%) // 버튼 hover 색상
-  }
+button {
+    background-color: $blue-color;  // 버튼 배경 (빨간색)
+    color: $button-text-color; // 버튼 텍스트 색상 (흰색)
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+
+    &:hover {
+        background: darken($blue-color, 20%) // 버튼 hover 색상
+    }
 }
 
 .header {
-  background-color: $header-background;  // 헤더 배경 (은색)
-  padding: 20px;
+    background-color: $header-background;  // 헤더 배경 (은색)
+    padding: 20px;
 }
 
-.footer {
-    background-color: $footer-background;  // 금색 배경
-    color: $footer-text-color;  // 흰색 텍스트 색상
-    padding: 20px 0;
-    text-align: center;  // 가운데 정렬
-  }
-  
-  .footer p {
-    margin: 0;
-    font-size: 14px;
-  }
-
 .highlight {
-  background-color: $highlight-color; // 강조 색상 (금색)
-  color: $highlight-text-color; // 강조 텍스트 색상 (은색)
+    background-color: $highlight-color; // 강조 색상 (금색)
+    color: $highlight-text-color; // 강조 텍스트 색상 (은색)
 }

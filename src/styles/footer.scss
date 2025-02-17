@@ -1,0 +1,157 @@
+/* src/styles/footer.scss */
+@import './variables';
+
+#footer {
+    .footer__inner {
+        padding: 16px;
+
+        .footer__text {
+            font-size: 12px;
+            text-transform: uppercase;
+            border-top: 1px solid $black-color;
+            border-bottom: 1px solid $black-color;
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer__info {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+
+            @media (max-width: 800px) {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .left {
+                width: 40%;
+                @media (max-width: 800px) {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+
+                .title {
+                    padding: 20px 0;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    transition: all 0.3s;
+
+                    a {
+                        color: $footer-text-color;
+                    }
+                    em {
+                        color: $footer-text-color;
+                        padding: 0 10px;
+                        opacity: 0;
+
+                        &:hover {
+                            opacity: 1;
+                            transition: all 0.4s;
+                        }
+                    }
+                }
+            }
+            
+            .right {
+                width: 50%;
+                @media (max-width: 800px) {
+                    width: 100%;
+                }
+
+                h3 {
+                    border-top: 2px solid $blue-color;
+                    font-size: 20px;
+                    margin-bottom: 40px;
+                    padding-top: 10px;
+                }
+
+                ul {
+                    border-top: 1px solid $blue-color;
+                    li {
+                        border-bottom: 1px solid $blue-color;
+
+                        a {
+                            padding: 14px 0;
+                            font-size: 14px;
+                            display: inline-block;
+                            text-transform: uppercase;
+                        }
+
+                        em {
+                            font-size: 12px;
+                            padding-left: 10px;
+                            opacity: 0;
+                            transition: all 0.4s;
+                        }
+
+                        &:hover {
+                            em {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer__right {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+
+        /* 구독하기 섹션 스타일 */
+        .subscribe-section {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+
+            .subscribe-title {
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+            }
+
+            .subscribe-form {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                
+                input {
+                    padding: 10px;
+                    margin: 5px;
+                    font-size: 14px;
+                    border: 1px solid $blue-color;
+                    border-radius: 5px;
+                    width: 80%;
+                    max-width: 300px;
+
+                    &:focus {
+                        outline: none;
+                        border-color: $blue-color;
+                    }
+                }
+
+                button {
+                    padding: 10px 20px;
+                    margin-top: 15px;
+                    background-color: $blue-color;
+                    color: #fff;
+                    font-size: 16px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+
+                    &:hover {
+                        background-color: darken($blue-color, 10%);
+                    }
+                }
+            }
+        }
+    }
+}
