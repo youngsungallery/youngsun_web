@@ -1,15 +1,33 @@
 [   
     {
-        "id": 16,
+        "id": 19,
+        "link": "https://www.hankyung.com/article/202502170361i",
+        "title": "\"이거 보려고 대전에서 왔어요\"…'대기줄 200m' 진풍경",
+        "date": "2025.02.17"
+    },
+    {
+        "id": 18,
+        "link": "https://n.news.naver.com/article/015/0005094712?sid=103",
+        "title": "\"인상파 걸작 보러 왔어요\"…더현대서울 주말아침 '오픈런'",
+        "date": "2025.02.16"
+    },
+    {
+        "id": 17,
         "link": "https://www.hankyung.com/article/202502146119i",
         "title": "\"5년을 애타게 기다렸다\"…인상파 걸작들, 여의도에 떴다",
         "date": "2025.02.14"
     },
     {
-        "id": 15,
+        "id": 16,
         "link": "https://www.mk.co.kr/news/economy/11240485",
         "title": "국립현대미술관 ‘올해의 작가상’에 양정욱",
         "date": "2025.02.13"
+    },
+    {
+        "id": 15,
+        "link": "https://m.newspim.com/news/view/20250212001074",
+        "title": "\"올해도 아트바젤 홍콩(3월28~30일)가시나요?\" 전세계 242개 톱갤러리 참가",
+        "date": "2025.02.12"
     },
     {
         "id": 14,
