@@ -12,6 +12,10 @@
         "url": "/video"
     },
     {
+        "title": "특강현황",
+        "url": "/Exhibitions_Poto"
+    },
+    {
         "title": "작품",
         "url": "/artwork"
     },
