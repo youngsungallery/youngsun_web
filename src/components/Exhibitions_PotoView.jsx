@@ -17,18 +17,29 @@ export default function Exhibitions_PotoView() {
         const owner = process.env.NEXT_PUBLIC_GITHUB_OWNER;
         const repo = process.env.NEXT_PUBLIC_GITHUB_REPO;
         const basePath = process.env.NEXT_PUBLIC_GITHUB_PATH;
+        const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
+
+        console.log('Fetch parameters:', { owner, repo, basePath, token });
 
         const response = await fetch(
           `https://api.github.com/repos/${owner}/${repo}/contents/${basePath}`,
           {
             headers: {
-              'Authorization': `token ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
+              'Authorization': `token ${token}`,
               'Accept': 'application/vnd.github.v3+json'
             }
           }
         );
 
+        console.log('Response status:', response.status);
+
         if (!response.ok) {
+          const errorText = await response.text();
+          console.error('GitHub API Error:', {
+            status: response.status,
+            statusText: response.statusText,
+            errorText: errorText
+          });
           throw new Error(`GitHub API 오류: ${response.status}`);
         }
 
@@ -73,19 +84,26 @@ export default function Exhibitions_PotoView() {
         const owner = process.env.NEXT_PUBLIC_GITHUB_OWNER;
         const repo = process.env.NEXT_PUBLIC_GITHUB_REPO;
         const basePath = process.env.NEXT_PUBLIC_GITHUB_PATH;
+        const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
         const path = `${basePath}${selectedGallery}`;
 
         const response = await fetch(
           `https://api.github.com/repos/${owner}/${repo}/contents/${path}`,
           {
             headers: {
-              'Authorization': `token ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
+              'Authorization': `token ${token}`,
               'Accept': 'application/vnd.github.v3+json'
             }
           }
         );
 
         if (!response.ok) {
+          const errorText = await response.text();
+          console.error('Image Fetch Error:', {
+            status: response.status,
+            statusText: response.statusText,
+            errorText: errorText
+          });
           throw new Error(`이미지 로딩 실패: ${response.status}`);
         }
 
