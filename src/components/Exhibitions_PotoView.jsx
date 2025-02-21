@@ -17,7 +17,7 @@ export default function Exhibitions_PotoView() {
         const owner = process.env.NEXT_PUBLIC_GITHUB_OWNER;
         const repo = process.env.NEXT_PUBLIC_GITHUB_REPO;
         const basePath = process.env.NEXT_PUBLIC_GITHUB_PATH;
-        const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
+        const token = process.env.GITHUB_TOKEN; // 서버 사이드 토큰
 
         console.log('Fetch parameters:', { owner, repo, basePath, token });
 
