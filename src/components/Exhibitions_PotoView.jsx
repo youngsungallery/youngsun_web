@@ -17,7 +17,7 @@ export default function Exhibitions_PotoView() {
         const owner = process.env.NEXT_PUBLIC_GITHUB_OWNER;
         const repo = process.env.NEXT_PUBLIC_GITHUB_REPO;
         const basePath = process.env.NEXT_PUBLIC_GITHUB_PATH;
-  
+
         const response = await fetch(
           `https://api.github.com/repos/${owner}/${repo}/contents/${basePath}`,
           {
@@ -27,39 +27,29 @@ export default function Exhibitions_PotoView() {
             }
           }
         );
-  
-        // 응답 상태 확인
+
         if (!response.ok) {
-          const errorBody = await response.text();
-          console.error('GitHub API Error:', errorBody);
-          throw new Error(`갤러리 목록 불러오기 실패: ${response.status}`);
+          throw new Error(`GitHub API 오류: ${response.status}`);
         }
-  
+
         const data = await response.json();
-  
-        // 폴더명을 날짜 기준으로 정렬 (최신순)
+
         const galleryFolders = data
           .filter(item => item.type === 'dir')
           .map(folder => folder.name)
           .sort((a, b) => {
-            // YYYY.MM 형식의 날짜 비교
             const parseDate = (dateString) => {
               const [year, month] = dateString.split('.');
               return new Date(parseInt(year), parseInt(month) - 1);
             };
-  
+
             return parseDate(b).getTime() - parseDate(a).getTime();
           });
-  
-        // 디버깅용 로그
-        console.log('Fetched galleries:', galleryFolders);
-  
+
         setGalleries(galleryFolders);
         
         if (galleryFolders.length > 0) {
           setSelectedGallery(galleryFolders[0]);
-        } else {
-          throw new Error('갤러리 폴더가 없습니다.');
         }
         
         setIsLoading(false);
@@ -69,22 +59,22 @@ export default function Exhibitions_PotoView() {
         setIsLoading(false);
       }
     };
-  
+
     fetchGalleries();
   }, []);
 
   // 선택된 갤러리 이미지 불러오기
-useEffect(() => {
+  useEffect(() => {
     const fetchImages = async () => {
       if (!selectedGallery) return;
-  
+
       try {
         setIsLoading(true);
         const owner = process.env.NEXT_PUBLIC_GITHUB_OWNER;
         const repo = process.env.NEXT_PUBLIC_GITHUB_REPO;
         const basePath = process.env.NEXT_PUBLIC_GITHUB_PATH;
         const path = `${basePath}${selectedGallery}`;
-  
+
         const response = await fetch(
           `https://api.github.com/repos/${owner}/${repo}/contents/${path}`,
           {
@@ -94,13 +84,13 @@ useEffect(() => {
             }
           }
         );
-  
+
         if (!response.ok) {
-          throw new Error('이미지 로딩 실패');
+          throw new Error(`이미지 로딩 실패: ${response.status}`);
         }
-  
+
         const data = await response.json();
-  
+
         const fetchedImages = data
           .filter(file => 
             file.type === 'file' && 
@@ -109,25 +99,26 @@ useEffect(() => {
             )
           )
           .map(file => file.download_url);
-  
+
         if (fetchedImages.length === 0) {
           throw new Error('해당 갤러리에 이미지가 없습니다.');
         }
-  
+
         setImages(fetchedImages);
         setCurrentImageIndex(0);
       } catch (error) {
+        console.error('이미지 로딩 중 오류:', error);
         setError(error.message);
         setImages([]);
       } finally {
         setIsLoading(false);
       }
     };
-  
+
     fetchImages();
   }, [selectedGallery]);
 
-  // 자동 슬라이드 useEffect
+  // 자동 슬라이드 로직
   useEffect(() => {
     let intervalId;
 
@@ -146,7 +137,7 @@ useEffect(() => {
     };
   }, [isAutoSlide, images]);
 
-  // 수동 이미지 변경 함수
+  // 이미지 변경 함수
   const handleNextImage = useCallback(() => {
     setCurrentImageIndex(prev => 
       prev < images.length - 1 ? prev + 1 : 0
