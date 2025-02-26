@@ -1,261 +1,71 @@
-import { useState, useEffect, useCallback } from 'react';
-import Image from 'next/image';
+import React, { useState } from 'react';
+import exhibitionData from '../DB/exhibitionPoto.json';
 
-export default function Exhibitions_PotoView() {
-  const [galleries, setGalleries] = useState([]);
-  const [selectedGallery, setSelectedGallery] = useState(null);
-  const [images, setImages] = useState([]);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [isAutoSlide, setIsAutoSlide] = useState(true);
+const ExhibitionList = ({ selectedExhibition, setSelectedExhibition, handleExhibitionClick }) => {
+  return (
+    <div className="exhibition-list">
+      {exhibitionData.map((exhibition) => (
+        <div
+          key={exhibition.id}
+          className={`exhibition-item ${selectedExhibition.id === exhibition.id ? 'selected' : ''}`}
+          onClick={() => handleExhibitionClick(exhibition)}
+        >
+          {exhibition.title}
+        </div>
+      ))}
+    </div>
+  );
+};
 
-  // 갤러리 목록 불러오기
-  useEffect(() => {
-    const fetchGalleries = async () => {
-      try {
-        const owner = process.env.NEXT_PUBLIC_GITHUB_OWNER;
-        const repo = process.env.NEXT_PUBLIC_GITHUB_REPO;
-        const basePath = process.env.NEXT_PUBLIC_GITHUB_PATH;
-        const token = process.env.GITHUB_TOKEN; // 서버 사이드 토큰
+const ExhibitionPhotos = ({ selectedExhibition, currentIndex, setCurrentIndex }) => {
+  const itemsPerLoad = 5;
 
-        console.log('Fetch parameters:', { owner, repo, basePath, token });
-
-        const response = await fetch(
-          `https://api.github.com/repos/${owner}/${repo}/contents/${basePath}`,
-          {
-            headers: {
-              'Authorization': `token ${token}`,
-              'Accept': 'application/vnd.github.v3+json'
-            }
-          }
-        );
-
-        console.log('Response status:', response.status);
-
-        if (!response.ok) {
-          const errorText = await response.text();
-          console.error('GitHub API Error:', {
-            status: response.status,
-            statusText: response.statusText,
-            errorText: errorText
-          });
-          throw new Error(`GitHub API 오류: ${response.status}`);
-        }
-
-        const data = await response.json();
-
-        const galleryFolders = data
-          .filter(item => item.type === 'dir')
-          .map(folder => folder.name)
-          .sort((a, b) => {
-            const parseDate = (dateString) => {
-              const [year, month] = dateString.split('.');
-              return new Date(parseInt(year), parseInt(month) - 1);
-            };
-
-            return parseDate(b).getTime() - parseDate(a).getTime();
-          });
-
-        setGalleries(galleryFolders);
-        
-        if (galleryFolders.length > 0) {
-          setSelectedGallery(galleryFolders[0]);
-        }
-        
-        setIsLoading(false);
-      } catch (error) {
-        console.error('갤러리 로딩 중 오류:', error);
-        setError(error.message);
-        setIsLoading(false);
-      }
-    };
-
-    fetchGalleries();
-  }, []);
-
-  // 선택된 갤러리 이미지 불러오기
-  useEffect(() => {
-    const fetchImages = async () => {
-      if (!selectedGallery) return;
-
-      try {
-        setIsLoading(true);
-        const owner = process.env.NEXT_PUBLIC_GITHUB_OWNER;
-        const repo = process.env.NEXT_PUBLIC_GITHUB_REPO;
-        const basePath = process.env.NEXT_PUBLIC_GITHUB_PATH;
-        const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
-        const path = `${basePath}${selectedGallery}`;
-
-        const response = await fetch(
-          `https://api.github.com/repos/${owner}/${repo}/contents/${path}`,
-          {
-            headers: {
-              'Authorization': `token ${token}`,
-              'Accept': 'application/vnd.github.v3+json'
-            }
-          }
-        );
-
-        if (!response.ok) {
-          const errorText = await response.text();
-          console.error('Image Fetch Error:', {
-            status: response.status,
-            statusText: response.statusText,
-            errorText: errorText
-          });
-          throw new Error(`이미지 로딩 실패: ${response.status}`);
-        }
-
-        const data = await response.json();
-
-        const fetchedImages = data
-          .filter(file => 
-            file.type === 'file' && 
-            ['jpg', 'png', 'jpeg', 'gif', 'webp'].some(ext => 
-              file.name.toLowerCase().endsWith(ext)
-            )
-          )
-          .map(file => file.download_url);
-
-        if (fetchedImages.length === 0) {
-          throw new Error('해당 갤러리에 이미지가 없습니다.');
-        }
-
-        setImages(fetchedImages);
-        setCurrentImageIndex(0);
-      } catch (error) {
-        console.error('이미지 로딩 중 오류:', error);
-        setError(error.message);
-        setImages([]);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchImages();
-  }, [selectedGallery]);
-
-  // 자동 슬라이드 로직
-  useEffect(() => {
-    let intervalId;
-
-    if (isAutoSlide && images.length > 1) {
-      intervalId = setInterval(() => {
-        setCurrentImageIndex(prev => 
-          prev < images.length - 1 ? prev + 1 : 0
-        );
-      }, 2000);
-    }
-
-    return () => {
-      if (intervalId) {
-        clearInterval(intervalId);
-      }
-    };
-  }, [isAutoSlide, images]);
-
-  // 이미지 변경 함수
-  const handleNextImage = useCallback(() => {
-    setCurrentImageIndex(prev => 
-      prev < images.length - 1 ? prev + 1 : 0
-    );
-  }, [images]);
-
-  const handlePrevImage = useCallback(() => {
-    setCurrentImageIndex(prev => 
-      prev > 0 ? prev - 1 : images.length - 1
-    );
-  }, [images]);
-
-  // 자동 슬라이드 토글 함수
-  const toggleAutoSlide = () => {
-    setIsAutoSlide(prev => !prev);
+  const handleLoadMore = () => {
+    setCurrentIndex(currentIndex + itemsPerLoad);
   };
 
-  // 로딩 및 오류 상태 처리
-  if (isLoading) return <div>로딩 중...</div>;
-  if (error) return <div>오류: {error}</div>;
-
   return (
-    <div className="exhibitions-container">
-      {/* 왼쪽 사이드바 */}
-      <div className="gallery-sidebar">
-        <h2 className="gallery-sidebar__title">전시 목록</h2>
-        {galleries.map(gallery => (
-          <div 
-            key={gallery}
-            className={`gallery-sidebar__item ${
-              selectedGallery === gallery ? 'gallery-sidebar__item--selected' : ''
-            }`}
-            onClick={() => setSelectedGallery(gallery)}
-          >
-            {gallery}
+    <div className="exhibition-photos">
+      <h2>{selectedExhibition.title}</h2>
+      <div className="photo-grid">
+        {selectedExhibition.photos.slice(0, currentIndex).map((photoUrl, index) => (
+          <div key={index} className="photo-item">
+            <img src={photoUrl} alt={`Artwork ${index + 1}`} />
           </div>
         ))}
       </div>
-
-      {/* 오른쪽 메인 뷰어 */}
-      <div className="gallery-viewer">
-        {/* 선택된 갤러리 제목 */}
-        {selectedGallery && (
-          <div className="gallery-viewer__header">
-            {selectedGallery}
-          </div>
-        )}
-
-        {/* 이미지 뷰어 */}
-        <div className="gallery-viewer__image-container">
-          {images.length > 0 ? (
-            <div className="image-wrapper">
-              <Image 
-                src={images[currentImageIndex]}
-                alt={`이미지 ${currentImageIndex + 1}`}
-                fill
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                style={{ 
-                  objectFit: 'contain',
-                  objectPosition: 'center'
-                }}
-              />
-            </div>
-          ) : (
-            <p>이미지가 없습니다.</p>
-          )}
-        </div>
-
-        {/* 이미지 네비게이션 */}
-        <div className="gallery-viewer__navigation">
-          <button 
-            className="nav-button"
-            onClick={handlePrevImage}
-            disabled={images.length === 0}
-          >
-            이전
-          </button>
-          <span className="page-info">
-            {images.length > 0 ? `${currentImageIndex + 1} / ${images.length}` : '0 / 0'}
-          </span>
-          <button 
-            className="nav-button"
-            onClick={handleNextImage}
-            disabled={images.length === 0}
-          >
-            다음
-          </button>
-          <button 
-            className="nav-button"
-            onClick={toggleAutoSlide}
-            style={{ 
-              backgroundColor: isAutoSlide ? '#28a745' : '#dc3545',
-              marginLeft: '10px'
-            }}
-          >
-            {isAutoSlide ? '자동 슬라이드 중' : '자동 슬라이드 정지'}
-          </button>
-        </div>
-      </div>
+      {currentIndex < selectedExhibition.photos.length && (
+        <button className="load-more" onClick={handleLoadMore}>
+          더보기
+        </button>
+      )}
     </div>
   );
-}
+};
+
+const Exhibitions_PotoView = () => {
+  const [selectedExhibition, setSelectedExhibition] = useState(exhibitionData[0]);
+  const [currentIndex, setCurrentIndex] = useState(15); // 초기 이미지 개수를 15개로 설정
+
+  const handleExhibitionClick = (exhibition) => {
+    setSelectedExhibition(exhibition);
+    setCurrentIndex(15); // 새로운 제목 선택 시 초기화
+  };
+
+  return (
+    <div className="exhibitions-poto">
+      <ExhibitionList
+        selectedExhibition={selectedExhibition}
+        setSelectedExhibition={setSelectedExhibition}
+        handleExhibitionClick={handleExhibitionClick}
+      />
+      <ExhibitionPhotos
+        selectedExhibition={selectedExhibition}
+        currentIndex={currentIndex}
+        setCurrentIndex={setCurrentIndex}
+      />
+    </div>
+  );
+};
+
+export default Exhibitions_PotoView;
