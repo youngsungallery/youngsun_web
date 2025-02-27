@@ -1,4 +1,11 @@
 [{
+    "id":50,
+    "title": "자기만의 침묵",
+    "desc": "김정환 작가 개인전",
+    "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/exh/exh_main_2025_03_01.png?raw=true",
+    "date" : "2025.03.01. ~ 2025.03.31."
+},
+{
     "id":49,
     "title": "광복 80주년 기억의 울림, 새로운 도약 | [장소] Gallery 영통 (영통구청 1,2층)",
     "desc": "[장소] Gallery 영통 (영통구청 1,2층)",
