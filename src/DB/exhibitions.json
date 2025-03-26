@@ -1,4 +1,10 @@
 [{
+    "id":51,
+    "title": "소장작품전",
+    "desc": "영선갤러리",
+    "image": "https://github.com/youngsungallery/IMG_DB/blob/main/youngsungallery/exh/exh_main_2025_04_05.png?raw=true",
+    "date" : "2025.04.05. ~ 2025.06.31."
+},{
     "id":50,
     "title": "자기만의 침묵",
     "desc": "김정환 작가 개인전",
