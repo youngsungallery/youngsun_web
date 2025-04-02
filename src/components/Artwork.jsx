@@ -74,6 +74,7 @@ const Artworks = () => {
                                 <p>{artwork.size}</p>
                                 <p>{artwork.technique}</p>
                                 <p>{artwork.year}</p>
+                                <p>{artwork.code}</p>
                             </div>
                         </div>
                     ))}
